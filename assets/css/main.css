@@ -2,104 +2,112 @@ body{
     height: 2000px;
 }
 
-.head__vd{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-}
-
-.head__vd-vd{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-
-}
-
-.head__vd-box{
-    margin: 5% 0 ;
+header{
     position: relative;
-    border: 5px;
-    padding: 5px;
-    order: 1;
+    height: 100vh; 
     width: 100%;
-    height: 30%;
-
 }
 
-.big_brand {
+header img{
+    width: 100%;
+    height: 100%;
     position: absolute;
-    font-size: 15vw;
-    text-align: center;
-    color: black;   
-    height: 20rem;
-    width: 100%;
-    margin: 10rem 0 ;
+    
 }
 
-.head__nav{
+header nav{
     top: 0;
-    height: 6rem; 
+    height: 30rem; 
     position: fixed ;
     width: 100%;
 }
 
-.head__nav-new{
+.add{
+    height: 6rem;
     display: flex;
     justify-content: space-between;
     border-bottom: 0.5px solid black;
     background-color: white;
+    .icon{
+        color: black;
+    }
+    .left_item{
+        display: block;
+    }
+    @media (max-width:1000px) {
+        .left_item {
+            display: none;
+        }
+    }
 }
 
-
-.head__nav-li{
-    margin: 1.6rem;
-    padding: 0;
+.left_item{
+    order: 1;
+    display: none;
+    padding-right: 5rem;
+    display: none;
 }
 
-.head__nav-item{
-    display: inline-block;
-    list-style-type: none;
-    padding: 10px;
-}
-
-.se {
-    z-index: 2;
+nav ul {
+    position: relative;
     display: flex;
     justify-content: right;
+    margin: 1rem 5vw 1rem 0;
+    order: 3;
 }
 
-.head__nav-item-link{
+nav ul li, .brand-item, .small__brand-item{
+    list-style-type: none;
     text-decoration: none;
-    color:black;
+}
+
+.small__brand-item,
+.icon{
+    padding: 10px;
+    color:white;
     font-weight: 600;
-    font-size: 1.6rem;
+    font-size: 2rem;
+    display: block;
+}   
+
+.acv{
+    color: black;
 }
 
 .brand {
-    position: absolute;
-    font-size: 15vw;
-    text-align: center;
-    color: white;   
-    width: 100%;
-    margin: 10rem 0 ;
+    height: 20rem;
+    display: flex;
+    justify-content: center; 
 }
 
-.small-brand { 
+/* scroll */
+.small__brand{  
     animation: fadeIn ease-in 0.5s;
-    font-size: 3rem;
-    font-weight: 300;
-    z-index: 1;
+    margin: 1rem 5vw ;
+    height: auto;
+    justify-content: center;
+    order: 2;
 }
 
-.head__nav-item-link:hover {
+.brand-item{
+    font-size: 15vw;
+    color: white;   
+    margin-top: 4.5vw; 
+}
+
+/* scroll */
+.small__brand-item {
+    font-size: 3rem;
+    color: black;
+}
+
+
+ 
+.icon:hover {
     color: rgba(76, 72, 72, 0.5);
     font-size: calc(100% + 5px);
 }  
 
-.head__nav-item-link-login{
-    display: contents;
-}
 
 @keyframes fadeIn {
     from{
@@ -112,7 +120,7 @@ body{
     }
 }
 
-.modal {
+/* .modal {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -126,12 +134,12 @@ body{
     height: 100%;
     width: 100%;
     background-color: rgba(200, 200, 200,0.5);
-}
+} */
 
-.modal__body{
+/* .modal__body{
     border: 1px solid black;
     background-color: white;
-    /* background-color: red; */
+     background-color: red; 
     height: 50%;
     min-height: 200px;
     width: 30%;
@@ -149,4 +157,4 @@ body{
 .login__input{
     text-align: center;
     text-justify: 10px;
-}
+} */
