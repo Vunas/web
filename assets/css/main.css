@@ -203,3 +203,10 @@ nav ul li, .brand-item, .small__brand-item{
     text-align: center;
     text-justify: 10px;
 } */
+
+.content {
+    border: 1px solid black;
+    height: 100rem;
+    width: 100%;
+
+}
