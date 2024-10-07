@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/ci.css" />
-    <link rel="stylesheet" href="./assets/css/base.css" />
+    <!-- <link rel="stylesheet" href="./assets/css/base.css" /> -->
     <link
       rel="stylesheet"
       href="./assets/font/fontawesome-free-6.6.0-web/css/all.min.css"
@@ -31,9 +31,16 @@
             ></a>
           </li>
           <li>
-            <a title="Tim Kiem" class="icon" href=""
+            <a title="Tim Kiem" class="icon search" href=""
               ><i class="fa-solid fa-magnifying-glass"></i
-            ></a>
+            >
+            <div class="search_div">
+              <div style="display: inline-flex; position: relative;">
+                <input type="text" style="border-radius: 50;">
+                <button style="position: absolute; right: 0; ; color: black; border-radius: 100%;"></button>
+              </div>
+            </div>
+          </a>
           </li>
           <li>
             <a
@@ -68,16 +75,22 @@
             </div>
           </li>
         </ul>
-        <div id="brand" class="brand">
+        <span id="brand" class="brand">
           <a href="" id="brand-item" class="brand-item">G U N D A M </a>
-        </div>
+        </span>
       </nav>
       <div class="container">
         <div class="imgg">
-        <video src="./assets/video/gundam-witch-mercury.1920x1080.mp4" autoplay muted loop></video>
+        <video class="video1" src="./assets/video/gundam.mp4" autoplay loop>
+          
+        </video>
+        <div class="videoControler" id="videoControler">
+          <button class="muteVideo" onclick="muteVideo" ><i class="fa-solid fa-volume-high"></i></button>
+          <button onclick="pauseVideo"><i class="fa-solid fa-pause"></i></button>
+        </div>
          <!-- <img class="bcd" src="assets/img/animation.png" alt="" /> -->
         <!-- <img class="abc" src="assets/img/tenor.gif" alt="" /> -->
-         <div class="aimgg"><a class="aimggg" href="">Go to Shop</a></div>
+         <span class="aimgg"><a class="aimggg" href="">Go to Shop</a></span>
         </div>
         <!-- <div class="content">
           <h1>tieu de</h1>
@@ -86,11 +99,13 @@
       </div>
       <footer>
         <div>
-          <h1>Liên Hệ</h1>
+          <h1>Địa Chỉ</h1>
           <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
+            <li><a href="">shop TP HCM Q5 abcdef</a></li>
+            <li><a href="">shop TP HCM Q1 abcde</a></li>
+            <li><a href="">shop TP HCM Q2 abcde</a></li>
+            <li><a href="">shop TP Hà Nội Quận Ba Đình abcde</a></li>
+            <li><a href="">shop TP HCM Q4 abcde</a></li>
           </ul>
         </div>
         <div>
@@ -98,6 +113,9 @@
         </div>
         <div>
           <h1>Trợ Giúp</h1>
+        </div>
+        <div class="brand-footer">
+          <a href="""> G U N D A M</a>
         </div>
       </footer>
       <!-- <div class="modal">
