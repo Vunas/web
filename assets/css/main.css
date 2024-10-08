@@ -43,8 +43,12 @@ nav {
 .imgg {
   height: 100%;
   width: 100%;
+  position: relative;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
+
 
 .container video,
 .container img {
@@ -72,21 +76,18 @@ nav {
 }
 
 .videoControler{
-  position: relative;
+  position: absolute;
   width: 100%;
-  /* top: 46vw; */
-
+  bottom: 4%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .videoControler button{
-  font-size: 20px;
-  width: 30px;
+  position: relative;
+  all: unset;
   color: white;
-  background-color: rgba(255, 255, 255, 0);
-  border: none;
-  .muteVideo{
-    left: 5%;
-  }
+  padding: 0 5%;
 }
 
 
