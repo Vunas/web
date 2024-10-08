@@ -25,7 +25,7 @@
             <a
               title="shop"
               class="icon"
-              href="./menu-main/menu-main/index.html"
+              href=""
             >
               <i class="fa-solid fa-cart-shopping"></i
             ></a>
@@ -81,25 +81,37 @@
       </nav>
       <div class="container">
         <div class="imgg">
-          <video class="video1" id="mainVideo" src="./assets/video/gundam.mp4" autoplay muted loop></video>
+          <video class="mainVideo" id="mainVideo" src="./assets/video/gundam.mp4" autoplay muted loop></video>
+          <img class="mainImg" src="./assets/img/tenor.gif" alt="">
           <div class="videoControler" id="videoControler">
-            <button class="muteVideo" onclick="muteVideo()" ><i class="fa-solid fa-volume-high"></i></button>
-            <button class="pauseVideo" onclick="pauseVideo()"><i class="fa-solid fa-pause"></i></button>
+            <button class="muteVideo" onclick="muteVideo()" ><i class="fa-solid fa-volume-xmark"></i><i class="fa-solid fa-volume-high"></i></button>
+            <button class="pauseVideo" onclick="pauseVideo()"><i class="fa-solid fa-play"></i><i class="fa-solid fa-pause"></i></button>
           </div>
           <script>
-            const video= document.getElementById("mainVideo");
+            const vid= document.getElementById("mainVideo");
+            const mvid= document.querySelector('.muteVideo');
+            const pvid= document.querySelector('.pauseVideo');
 
             function pauseVideo(){
-            if(video.paused){
-              video.play();
+            if(vid.paused){
+              vid.play();
+              pvid.classList.remove('pvid');
             }
             else{
-              video.pause();
+              vid.pause();
+              pvid.classList.add('pvid');
             }
             }
 
             function muteVideo(){
-              video.muted = !video.muted;
+              vid.muted = !vid.muted;
+              if(!vid.muted){
+                mvid.classList.add("vol");
+              }
+              else{
+                mvid.classList.remove("vol");
+              }
+              
             }
           </script>
         
