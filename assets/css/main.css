@@ -42,6 +42,7 @@ nav {
 
 .imgg {
   height: 100%;
+  min-height: 400px;
   width: 100%;
   position: relative;
   text-align: center;
@@ -90,17 +91,48 @@ nav {
   padding: 0 5%;
 }
 
+.fa-volume-high{
+  visibility: hidden;
+}
 
-.abc {
+.vol{
+  .fa-volume-high {
+  visibility: visible;
+  }
+  .fa-volume-xmark{
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+.fa-play {
+  visibility: hidden;
+}
+
+.pvid{
+  .fa-play{
+    visibility: visible;
+    
+  }
+  .fa-pause{
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+.mainImg {
   display: none;
 }
 
 @media (max-width: 1000px) {
-  .abc {
+  .mainImg {
     display: block;
   }
-  .bcd {
+  .mainVideo {
     display: none;
+  }
+  .aimggg{
+    font-size: 16px;
   }
 }
 
@@ -189,7 +221,7 @@ nav ul li,
 /* scroll */
 .small__brand {
   animation: fadeIn ease-in 0.5s;
-  margin: 10px 0;
+  margin: 10px 0 10px 5vw;
   justify-content: center;
   order: 2;
 }
