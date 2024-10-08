@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Menu Example</title>
+    <title>web chỉ học tập</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/main.css" />
@@ -34,7 +34,7 @@
             <a title="Tim Kiem" class="icon search" href=""
               ><i class="fa-solid fa-magnifying-glass"></i
             >
-<!--             <div class="search_div">
+            <!-- <div class="search_div">
               <div style="display: inline-flex; position: relative;">
                 <input type="text" style="border-radius: 50;">
                 <button style="position: absolute; right: 0; ; color: black; border-radius: 100%;"></button>
@@ -81,22 +81,32 @@
       </nav>
       <div class="container">
         <div class="imgg">
-        <video class="video1" src="./assets/video/gundam.mp4" autoplay loop>
-          
-        </video>
-        <div class="videoControler" id="videoControler">
-          <button class="muteVideo" onclick="muteVideo" ><i class="fa-solid fa-volume-high"></i></button>
-          <button onclick="pauseVideo"><i class="fa-solid fa-pause"></i></button>
+          <video class="video1" id="mainVideo" src="./assets/video/gundam.mp4" autoplay muted loop></video>
+          <div class="videoControler" id="videoControler">
+            <button class="muteVideo" onclick="muteVideo()" ><i class="fa-solid fa-volume-high"></i></button>
+            <button class="pauseVideo" onclick="pauseVideo()"><i class="fa-solid fa-pause"></i></button>
+          </div>
+          <script>
+            const video= document.getElementById("mainVideo");
+
+            function pauseVideo(){
+            if(video.paused){
+              video.play();
+            }
+            else{
+              video.pause();
+            }
+            }
+
+            function muteVideo(){
+              video.muted = !video.muted;
+            }
+          </script>
+        
+          <span class="aimgg"><a class="aimggg" href="">Go to Shop</a></span>
         </div>
-         <!-- <img class="bcd" src="assets/img/animation.png" alt="" /> -->
-        <!-- <img class="abc" src="assets/img/tenor.gif" alt="" /> -->
-         <span class="aimgg"><a class="aimggg" href="">Go to Shop</a></span>
-        </div>
-        <!-- <div class="content">
-          <h1>tieu de</h1>
-          <p><h1 style="color: white;">jacnacnkaldkmclkaclkalkca amvnvnjnvjanjvnjvnajnvjnajvnjvjajvnjnavjnjanjvnjnvnnvjanvjjnvkjavjbajvbuabvbavjkdsvkakjnvknkjvnkanvnanknvanknavkavlnnjnjsknknskjnkjnjkn</h1></p>
-        </div> -->
       </div>
+      <br>
       <footer>
         <div>
           <h1>Địa Chỉ</h1>
