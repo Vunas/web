@@ -10,6 +10,7 @@ header {
 
 nav {
   z-index: 1;
+  /* order: 1; */
   left: 0;
   top: 0;
   position: fixed;
@@ -28,7 +29,7 @@ nav {
   .small__brand-item:hover,
   .icon:hover {
     color: rgba(76, 72, 72, 0.5);
-    transform: scale(1.5);
+    /* transform: scale(1.1); */
   }
   .left_item {
     display: block;
@@ -48,6 +49,7 @@ nav {
   text-align: center;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 
@@ -61,7 +63,7 @@ nav {
 .aimgg {
   position: absolute;
   font-size: 2vw;
-  top: 35vw;
+  top: 60%;
   left: 45.5%;
 }
 
@@ -120,16 +122,16 @@ nav {
   }
 }
 
-.mainImg {
+.mobile_video{
   display: none;
 }
 
 @media (max-width: 1000px) {
-  .mainImg {
-    display: block;
-  }
   .mainVideo {
-    display: none;
+      display: none;
+  }
+  .mobile_video{
+    display: block;
   }
   .aimggg{
     font-size: 16px;
@@ -160,6 +162,7 @@ nav ul li,
 
 .small__brand-item,
 .icon {
+  all: unset;
   padding: 10px;
   color: white;
   font-weight: 600;
@@ -170,21 +173,42 @@ nav ul li,
 
 .icon:hover {
   color: white;
-  transform: scale(1.5);
-}
-
-.search:hover .search_div{
-    display: block;
+  /* transform: scale(1.1); */
 }
 
 .search_div{
-    border-radius: 50% 0 0 0;
+    /* border-radius: 50% 0 0 0; */
+    top: 0;
+    left: 10%;
     position: absolute;
-    background-color: red;
-    display: none;
+    border-radius: 10px;
+    background-color: gray;
     height: 300px;
-    right: 30px;
+    width: 80%;
+    right: 0;
+    display: none;
 }
+
+.search_div header{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search_div header input{
+  width: 40vw;
+  height: 25px;
+}
+
+.search_div header button{
+  all: unset;
+  background-color: white;
+  width: 30px;
+  height: 25px;
+  font-size: 16px;
+}
+
+
 
 .menu {
   background-color: rgba(255, 255, 255, 0);
@@ -276,7 +300,7 @@ nav ul li,
     height: 100%;
     width: 100%;
     background-color: rgba(200, 200, 200,0.5);
-} */
+}  */
 
 /* .modal__body{
     border: 1px solid black;
@@ -299,7 +323,7 @@ nav ul li,
 .login__input{
     text-align: center;
     text-justify: 10px;
-} */
+}
 
 .content {
   background-color: red;
@@ -307,6 +331,8 @@ nav ul li,
   height: 1000px;
   width: 100%;
 }
+
+*/
 
 footer {
   display: flex;
