@@ -22,25 +22,22 @@
         </ul>
         <ul>
           <li>
-            <a
-              title="shop"
-              class="icon"
-              href=""
-            >
+            <a title="shop" class="icon" href="">
               <i class="fa-solid fa-cart-shopping"></i
             ></a>
           </li>
           <li>
-            <a title="Tim Kiem" class="icon search" href=""
-              ><i class="fa-solid fa-magnifying-glass"></i
-            >
-            <!-- <div class="search_div">
-              <div style="display: inline-flex; position: relative;">
-                <input type="text" style="border-radius: 50;">
-                <button style="position: absolute; right: 0; ; color: black; border-radius: 100%;"></button>
-              </div>
-            </div> -->
-          </a>
+            <button title="Tim Kiem" class="icon search" href="">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <script>
+            function search(){
+              document.getElementById("search_div").style.display="block";
+          }
+            function closes(){
+              document.getElementById("search_div").style.display="none";
+            }
+          </script>
           </li>
           <li>
             <a
@@ -82,43 +79,45 @@
       <div class="container">
         <div class="imgg">
           <video class="mainVideo" id="mainVideo" src="./assets/video/gundam.mp4" autoplay muted loop></video>
-          <img class="mainImg" src="./assets/img/tenor.gif" alt="">
+          <video class="mobile_video" id="mainVideo" src="./assets/video/mobilegundam.mp4" autoplay muted loop></video>
           <div class="videoControler" id="videoControler">
-            <button class="muteVideo" onclick="muteVideo()" ><i class="fa-solid fa-volume-xmark"></i><i class="fa-solid fa-volume-high"></i></button>
-            <button class="pauseVideo" onclick="pauseVideo()"><i class="fa-solid fa-play"></i><i class="fa-solid fa-pause"></i></button>
+            <button class="muteVideo" onclick="muteVideo()">
+              <i class="fa-solid fa-volume-xmark"></i
+              ><i class="fa-solid fa-volume-high"></i>
+            </button>
+            <button class="pauseVideo" onclick="pauseVideo()">
+              <i class="fa-solid fa-play"></i><i class="fa-solid fa-pause"></i>
+            </button>
           </div>
           <script>
-            const vid= document.getElementById("mainVideo");
-            const mvid= document.querySelector('.muteVideo');
-            const pvid= document.querySelector('.pauseVideo');
+            const vid = document.getElementById("mainVideo");
+            const mvid = document.querySelector(".muteVideo");
+            const pvid = document.querySelector(".pauseVideo");
 
-            function pauseVideo(){
-            if(vid.paused){
-              vid.play();
-              pvid.classList.remove('pvid');
-            }
-            else{
-              vid.pause();
-              pvid.classList.add('pvid');
-            }
-            }
-
-            function muteVideo(){
-              vid.muted = !vid.muted;
-              if(!vid.muted){
-                mvid.classList.add("vol");
+            function pauseVideo() {
+              if (vid.paused) {
+                vid.play();
+                pvid.classList.remove("pvid");
+              } else {
+                vid.pause();
+                pvid.classList.add("pvid");
               }
-              else{
+            }
+
+            function muteVideo() {
+              vid.muted = !vid.muted;
+              if (!vid.muted) {
+                mvid.classList.add("vol");
+              } else {
                 mvid.classList.remove("vol");
               }
-              
             }
           </script>
-        
+
           <span class="aimgg"><a class="aimggg" href="">Go to Shop</a></span>
         </div>
       </div>
-      <br>
+      <br />
       <footer>
         <div>
           <h1>Địa Chỉ</h1>
@@ -137,10 +136,11 @@
           <h1>Trợ Giúp</h1>
         </div>
         <div class="brand-footer">
-          <a href="""> G U N D A M</a>
+          <a href=""> G U N D A M</a>
         </div>
       </footer>
       <!-- <div class="modal">
+        
         <div class="modal__overlay"></div>
         <div class="modal__body">
           <div class="modal__in">
@@ -153,6 +153,16 @@
           </div>
         </div>
       </div> -->
+      <div class="search_div" id="search_div">
+        <header>
+          <span>GUNDAM</span>
+          <span>
+            <button>Back</button>
+            <input type="text" />
+            <button onclick="closes()">Go</button>
+          </span>
+        </header>
+      </div>
     </div>
   </body>
 </html>
