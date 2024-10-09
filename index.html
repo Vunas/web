@@ -79,7 +79,7 @@
       <div class="container">
         <div class="imgg">
           <video class="mainVideo" id="mainVideo" src="./assets/video/gundam.mp4" autoplay muted loop></video>
-          <video class="mobile_video" id="mainVideo" src="./assets/video/mobilegundam.mp4" autoplay muted loop></video>
+          <video class="mobile_video" id="mobile_video" src="./assets/video/mobilegundam.mp4" autoplay muted loop></video>
           <div class="videoControler" id="videoControler">
             <button class="muteVideo" onclick="muteVideo()">
               <i class="fa-solid fa-volume-xmark"></i
@@ -91,21 +91,25 @@
           </div>
           <script>
             const vid = document.getElementById("mainVideo");
+            const vio = document.getElementById("mobile_video");
             const mvid = document.querySelector(".muteVideo");
             const pvid = document.querySelector(".pauseVideo");
-
+            
             function pauseVideo() {
               if (vid.paused) {
                 vid.play();
+                vio.play();
                 pvid.classList.remove("pvid");
               } else {
                 vid.pause();
+                vio.pause();
                 pvid.classList.add("pvid");
               }
             }
 
             function muteVideo() {
               vid.muted = !vid.muted;
+              vio.muted= !vio.muted;
               if (!vid.muted) {
                 mvid.classList.add("vol");
               } else {
