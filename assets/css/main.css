@@ -123,15 +123,18 @@ nav {
 }
 
 .mobile_video{
-  display: none;
+  visibility: hidden;
+  position: absolute;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 600px) {
   .mainVideo {
-      display: none;
+      visibility: hidden;
+      position: absolute;
   }
   .mobile_video{
-    display: block;
+    visibility: visible;
+    position: relative;
   }
   .aimggg{
     font-size: 16px;
