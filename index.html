@@ -5,8 +5,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="stylesheet" href="./assets/css/ci.css" />
-    <!-- <link rel="stylesheet" href="./assets/css/base.css" /> -->
     <link
       rel="stylesheet"
       href="./assets/font/fontawesome-free-6.6.0-web/css/all.min.css"
@@ -27,17 +25,9 @@
             ></a>
           </li>
           <li>
-            <button title="Tim Kiem" class="icon search" href="">
+            <button title="Tim Kiem" onclick="search()" class="icon search" href="">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-            <script>
-            function search(){
-              document.getElementById("search_div").style.display="block";
-          }
-            function closes(){
-              document.getElementById("search_div").style.display="none";
-            }
-          </script>
           </li>
           <li>
             <a
@@ -157,15 +147,17 @@
           </div>
         </div>
       </div> -->
+      
+      <div  class="modal" id="modal">
       <div class="search_div" id="search_div">
         <header>
-          <span>GUNDAM</span>
-          <span>
-            <button>Back</button>
-            <input type="text" />
-            <button onclick="closes()">Go</button>
-          </span>
+          <form action="">
+            <!-- <button>Back</button> -->
+            <input type="search" placeholder="Search.." name="search"/>
+            <button onclick="closes()" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
         </header>
+      </div>
       </div>
     </div>
   </body>
