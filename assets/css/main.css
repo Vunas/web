@@ -10,7 +10,6 @@ header {
 
 nav {
   z-index: 1;
-  /* order: 1; */
   left: 0;
   top: 0;
   position: fixed;
@@ -34,7 +33,7 @@ nav {
   .left_item {
     display: block;
   }
-  @media (max-width: 1000px) {
+  @media (max-width: 800px) {
     .left_item {
       display: none;
     }
@@ -64,7 +63,6 @@ nav {
   position: absolute;
   font-size: 2vw;
   top: 60%;
-  left: 45.5%;
 }
 
 .aimggg {
@@ -135,6 +133,7 @@ nav {
   .mobile_video{
     visibility: visible;
     position: relative;
+    max-width: 400px;
   }
   .aimggg{
     font-size: 16px;
@@ -168,6 +167,7 @@ nav ul li,
   all: unset;
   padding: 10px;
   color: white;
+  /* text-shadow: 1px 1px black; */
   font-weight: 600;
   font-size: 16px;
   display: block;
@@ -180,12 +180,12 @@ nav ul li,
 }
 
 .search_div{
-    /* border-radius: 50% 0 0 0; */
+    z-index: 3;
     top: 0;
     left: 10%;
     position: absolute;
     border-radius: 10px;
-    background-color: gray;
+    background-color: white;
     height: 300px;
     width: 80%;
     right: 0;
@@ -195,20 +195,40 @@ nav ul li,
 .search_div header{
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.search_div header form{
+  height: 30px;
+  overflow: hidden;
+  border: 1px solid black;
+  border-radius: 50px; ;
 }
 
 .search_div header input{
+  height: 30px;
   width: 40vw;
-  height: 25px;
+  border: unset;
+  border-radius: 50px;
+}
+
+.search_div header input:hover{
+  background-color: rgb(220,220,220);
 }
 
 .search_div header button{
   all: unset;
   background-color: white;
   width: 30px;
-  height: 25px;
+  height: 30px;
   font-size: 16px;
+  cursor: pointer;
+  border-radius: 50px;
+  align-items: center;
+}
+.search_div header button:hover {
+  background-color: rgb(220,220,220);
+  justify-items: center;
 }
 
 
@@ -289,15 +309,17 @@ nav ul li,
   }
 }
 
-/* .modal {
+.modal {
+  z-index: 2;
     position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     display: flex;
+    display: none;
 }
-
+/*
 .modal__overlay{
     position: absolute;
     height: 100%;
