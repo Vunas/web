@@ -149,14 +149,15 @@
       </div> -->
       
       <div  class="modal" id="modal">
+      <div onclick="closes()" class="modal__overlay"></div>
       <div class="search_div" id="search_div">
-        <header>
-          <form action="">
-            <!-- <button>Back</button> -->
+          <header>
+          <div>
+             <span onclick="closes()"><i class="fa-solid fa-magnifying-glass"></i></span>
             <input type="search" placeholder="Search.." name="search"/>
-            <button onclick="closes()" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-          </form>
-        </header>
+          </div>
+          <button><i class="fa-solid fa-gear"></i></button>
+          </header>
       </div>
       </div>
     </div>
