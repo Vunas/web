@@ -14,13 +14,25 @@ window.addEventListener("scroll", function () {
   }
 });
 
-function search() {
-  document.getElementById("modal").style.display = "block";
-  document.getElementById("search_div").style.display = "block";
+function open_search() {
+  document.getElementById("modal__overlay").style.display = "block";
+  document.getElementById("search_div").style.height = "50px";
+}
+
+function close_search() {
+  document.getElementById("modal__overlay").style.display = "none";
+  document.getElementById("search_div").style.height = "0px";
+}
+
+/*sideNavbar*/
+
+function open_sideNav() {
+  document.getElementById("modal__overlay").style.display = "block";
+  document.getElementById("sideNav").style.width = "500px";
 
 }
-function closes() {
-  document.getElementById("modal").style.display = "none";
-  document.getElementById("search_div").style.display = "none";
 
+function close_sideNav() {
+  document.getElementById("modal__overlay").style.display = "none";
+  document.getElementById("sideNav").style.width = "0px";
 }
