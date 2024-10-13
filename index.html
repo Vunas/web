@@ -25,7 +25,12 @@
             ></a>
           </li>
           <li>
-            <button title="Tim Kiem" onclick="search()" class="icon search" href="">
+            <button
+              title="Tim Kiem"
+              onclick="open_search()"
+              class="icon search"
+              href=""
+            >
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </li>
@@ -38,28 +43,9 @@
             ></a>
           </li>
           <li>
-            <div title="Menu" class="icon">
-              <div class="menu">
+            <button onclick="open_sideNav()" title="Menu" class="icon">
                 <i class="fa-solid fa-bars"></i>
-              </div>
-              <div class="menu-content">
-                <div
-                  style="
-                    min-height: 100px;
-                    color: black;
-                    font-size: 30px;
-                    text-align: center;
-                  "
-                >
-                  menu
-                </div>
-                <a href="">Trang chu</a>
-                <a href="">Thong Bao</a>
-                <a href="">Lien He</a>
-                <a href="">Tro Giup</a>
-                <a href="">hello</a>
-              </div>
-            </div>
+            </button>
           </li>
         </ul>
         <span id="brand" class="brand">
@@ -68,8 +54,22 @@
       </nav>
       <div class="container">
         <div class="imgg">
-          <video class="mainVideo" id="mainVideo" src="./assets/video/gundam.mp4" autoplay muted loop></video>
-          <video class="mobile_video" id="mobile_video" src="./assets/video/mobilegundam.mp4" autoplay muted loop></video>
+          <video
+            class="mainVideo"
+            id="mainVideo"
+            src="./assets/video/gundam.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+          <video
+            class="mobile_video"
+            id="mobile_video"
+            src="./assets/video/mobilegundam.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
           <div class="videoControler" id="videoControler">
             <button class="muteVideo" onclick="muteVideo()">
               <i class="fa-solid fa-volume-xmark"></i
@@ -84,7 +84,7 @@
             const vio = document.getElementById("mobile_video");
             const mvid = document.querySelector(".muteVideo");
             const pvid = document.querySelector(".pauseVideo");
-            
+
             function pauseVideo() {
               if (vid.paused) {
                 vid.play();
@@ -99,7 +99,7 @@
 
             function muteVideo() {
               vid.muted = !vid.muted;
-              vio.muted= !vio.muted;
+              vio.muted = !vio.muted;
               if (!vid.muted) {
                 mvid.classList.add("vol");
               } else {
@@ -133,33 +133,35 @@
           <a href=""> G U N D A M</a>
         </div>
       </footer>
-      <!-- <div class="modal">
-        
-        <div class="modal__overlay"></div>
-        <div class="modal__body">
-          <div class="modal__in">
-            <h1 class="login">
-              Dang Nhap<br />
-              <br />
-            </h1>
-            <h3>Tai Khoan <input class="login__input" type="text" /></h3>
-            <h3>Mat Khau <input class="login__input" type="text" /></h3>
-          </div>
-        </div>
-      </div> -->
-      
-      <div  class="modal" id="modal">
-      <div onclick="closes()" class="modal__overlay"></div>
-      <div class="search_div" id="search_div">
+      <div onclick="close_search(); close_sideNav()" class="modal__overlay" id="modal__overlay"></div>
+
+      <!-- search-->
+        <div class="search_div" id="search_div">
           <header>
-          <div>
-             <span onclick="closes()"><i class="fa-solid fa-magnifying-glass"></i></span>
-            <input type="search" placeholder="Search.." name="search"/>
-          </div>
-          <button><i class="fa-solid fa-gear"></i></button>
+            <div>
+              <span onclick="close_search()"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></span>
+              <input type="search" placeholder="Search.." name="search" />
+            </div>
           </header>
+        </div>
+
+      <!-- smenu-->
+      <div class="sideNav" id="sideNav">
+        <div class="sideNav__first">
+          <button><i class="fa-solid fa-less-than"></i></button>
+          <button onclick="close_sideNav()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <a href=""><i class="fa-solid fa-house"></i>Trang chu</a>
+        <a href=""><i class="fa-solid fa-seedling"></i>san Pham</a>
+        <a href=""><i class="fa-solid fa-bell"></i>Thong Bao</a>
+        <a href=""><i class="fa-solid fa-address-book"></i>Lien He</a>
+        <a href=""><i class="fa-solid fa-question"></i>Tro Giup</a>
       </div>
-      </div>
+    </div>
+      
+
     </div>
   </body>
 </html>
