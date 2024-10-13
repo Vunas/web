@@ -62,14 +62,6 @@
             muted
             loop
           ></video>
-          <video
-            class="mobile_video"
-            id="mobile_video"
-            src="./assets/video/mobilegundam.mp4"
-            autoplay
-            muted
-            loop
-          ></video>
           <div class="videoControler" id="videoControler">
             <button class="muteVideo" onclick="muteVideo()">
               <i class="fa-solid fa-volume-xmark"></i
@@ -150,14 +142,18 @@
       <!-- smenu-->
       <div class="sideNav" id="sideNav">
         <div class="sideNav__first">
-          <button><i class="fa-solid fa-less-than"></i></button>
           <button onclick="close_sideNav()"><i class="fa-solid fa-xmark"></i></button>
         </div>
-        <a href=""><i class="fa-solid fa-house"></i>Trang chu</a>
-        <a href=""><i class="fa-solid fa-seedling"></i>san Pham</a>
-        <a href=""><i class="fa-solid fa-bell"></i>Thong Bao</a>
-        <a href=""><i class="fa-solid fa-address-book"></i>Lien He</a>
-        <a href=""><i class="fa-solid fa-question"></i>Tro Giup</a>
+        <ul>
+        <li><a href=""><i class="fa-solid fa-house"></i>Trang chu</a></li>
+        <li class="sideNav__product">
+          <a href=""><i class="fa-solid fa-seedling"></i>san Pham</a>
+          <button><i class="fa-solid fa-arrow-right"></i></button>
+        </li>
+        <li><a href=""><i class="fa-solid fa-bell"></i>Thong Bao</a></li>
+        <li><a href=""><i class="fa-solid fa-address-book"></i>Lien He</a></li>
+        <li><a href=""><i class="fa-solid fa-question"></i>Tro Giup</a></li>
+        </ul>
       </div>
     </div>
       
