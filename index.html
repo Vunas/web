@@ -1,163 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>web chỉ học tập</title>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./main.js"></script>
     <link
       rel="stylesheet"
-      href="./assets/font/fontawesome-free-6.6.0-web/css/all.min.css"
+      href="./fontawesome-free-6.6.0-web/css/all.min.css"
     />
-    <script src="./assets/js/main.js"></script>
+    <title>Navigation Bar</title>
   </head>
   <body>
-    <div class="app">
-      <header></header>
-      <nav class="navbar">
-        <ul class="left_item">
-          <li class="icon"></li>
-        </ul>
-        <ul>
-          <li>
-            <a title="shop" class="icon" href="">
-              <i class="fa-solid fa-cart-shopping"></i
-            ></a>
-          </li>
-          <li>
-            <button
-              title="Tim Kiem"
-              onclick="open_search()"
-              class="icon search"
-              href=""
-            >
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </li>
-          <li>
-            <a
-              title="Dang Nhap/ Dang Xuat"
-              class="icon"
-              href="https://phuchoccode25.github.io/phuccccc/"
-              ><i class="fa-regular fa-user"></i
-            ></a>
-          </li>
-          <li>
-            <button onclick="open_sideNav()" title="Menu" class="icon">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-          </li>
-        </ul>
-        <span id="brand" class="brand">
-          <a href="" id="brand-item" class="brand-item">G U N D A M </a>
-        </span>
-      </nav>
-      <div class="container">
-        <div class="imgg">
-          <video
-            class="mainVideo"
-            id="mainVideo"
-            src="./assets/video/gundam.mp4"
-            autoplay
-            muted
-            loop
-          ></video>
-          <div class="videoControler" id="videoControler">
-            <button class="muteVideo" onclick="muteVideo()">
-              <i class="fa-solid fa-volume-xmark"></i
-              ><i class="fa-solid fa-volume-high"></i>
-            </button>
-            <button class="pauseVideo" onclick="pauseVideo()">
-              <i class="fa-solid fa-play"></i><i class="fa-solid fa-pause"></i>
-            </button>
+    <header></header>
+    <nav>
+      <span class="">GUNDAM</span>
+      <ul class="nav__mid">
+        <li><a class="nav__item home" href="">Trang chu</a></li>
+        <li class="nav__product">
+          <a class="nav__item" href="">San Pham</a>
+          <div class="div__product">
+            <a href="">GUNDAM</a>
+            <a href="">Mô hình tĩnh</a>
+            <a href="">FIGURE RISE</a>
+            <a href="">Dụng Cụ</a>
+            <a href="">Dragon Ball</a>
+            <a href="">FIGURE</a>
           </div>
-          <script>
-            const vid = document.getElementById("mainVideo");
-            const vio = document.getElementById("mobile_video");
-            const mvid = document.querySelector(".muteVideo");
-            const pvid = document.querySelector(".pauseVideo");
-
-            function pauseVideo() {
-              if (vid.paused) {
-                vid.play();
-                vio.play();
-                pvid.classList.remove("pvid");
-              } else {
-                vid.pause();
-                vio.pause();
-                pvid.classList.add("pvid");
-              }
-            }
-
-            function muteVideo() {
-              vid.muted = !vid.muted;
-              vio.muted = !vio.muted;
-              if (!vid.muted) {
-                mvid.classList.add("vol");
-              } else {
-                mvid.classList.remove("vol");
-              }
-            }
-          </script>
-
-          <span class="aimgg"><a class="aimggg" href="">Go to Shop</a></span>
-        </div>
-      </div>
-      <br />
-      <footer>
-        <div>
-          <h1>Địa Chỉ</h1>
-          <ul>
-            <li><a href="">shop TP HCM Q5 abcdef</a></li>
-            <li><a href="">shop TP HCM Q1 abcde</a></li>
-            <li><a href="">shop TP HCM Q2 abcde</a></li>
-            <li><a href="">shop TP Hà Nội Quận Ba Đình abcde</a></li>
-            <li><a href="">shop TP HCM Q4 abcde</a></li>
-          </ul>
-        </div>
-        <div>
-          <h1>Sản Phẩm</h1>
-        </div>
-        <div>
-          <h1>Trợ Giúp</h1>
-        </div>
-        <div class="brand-footer">
-          <a href=""> G U N D A M</a>
-        </div>
-      </footer>
-      <div onclick="close_search(); close_sideNav()" class="modal__overlay" id="modal__overlay"></div>
-
-      <!-- search-->
-        <div class="search_div" id="search_div">
-          <header>
-            <div>
-              <span onclick="close_search()"
-                ><i class="fa-solid fa-magnifying-glass"></i
-              ></span>
-              <input type="search" placeholder="Search.." name="search" />
-            </div>
-          </header>
-        </div>
-
-      <!-- smenu-->
-      <div class="sideNav" id="sideNav">
-        <div class="sideNav__first">
-          <button onclick="close_sideNav()"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <ul>
-        <li><a href=""><i class="fa-solid fa-house"></i>Trang chu</a></li>
-        <li class="sideNav__product">
-          <a href=""><i class="fa-solid fa-seedling"></i>san Pham</a>
-          <button><i class="fa-solid fa-arrow-right"></i></button>
         </li>
-        <li><a href=""><i class="fa-solid fa-bell"></i>Thong Bao</a></li>
-        <li><a href=""><i class="fa-solid fa-address-book"></i>Lien He</a></li>
-        <li><a href=""><i class="fa-solid fa-question"></i>Tro Giup</a></li>
-        </ul>
+        <li><a class="nav__item" href="">Thông Báo</a></li>
+        <li><a class="nav__item" href="">Liên Hệ</a></li>
+        <li><a class="nav__item" href="">Trợ Giúp</a></li>
+      </ul>
+      <ul class="nav__right">
+        <li>
+          <button onclick="open_search()" class="nav__item">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </li>
+        <li>
+          <button class="nav__item">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </li>
+        <li>
+          <button class="nav__item">
+            <i class="fa-regular fa-user"></i>
+          </button>
+        </li>
+        <li class="nav__item-bars">
+          <button onclick="open_sideNav()" class="nav__item">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <!-- <h1>hello</h1> -->  
+    
+
+    <div onclick="close_search(); close_sideNav(); close_productSide()" class="modal__overlay" id="modal__overlay"></div>
+    <!-- search-->
+
+    <div id="search_div" class="search_div">
+      <header>
+        <div>
+          <span><i class="fa-solid fa-magnifying-glass"></i></span>
+          <input type="search" placeholder="Search.." name="search" />
+          <span>       
+            <button onclick="advanced_search()" id="chevron-down" class="chevron chevron-down"><i class="fa-solid fa-chevron-down"></i></button>
+            <button onclick="close__advanced_search()" id="chevron-up" class="chevrop chevron-up"><i class="fa-solid fa-chevron-up"></i></button>
+          </span>
+        </div>
+          <button onclick="close_search()">cancel</button>
+      </header>
+      <div id="advanced_search">
+        <select>
+          <option value="GUNDAM">GUNDAM</option>
+          <option value="MHT">Mô Hình Tĩnh</option>
+          <option value="FR">FIGURE RISE</option>
+          <option value="DC">Dụng Cụ</option>
+          <option value="DR">DRAGON BALL</option>
+          <option value="FG">GIGURE</option>
+        </select>
+        <select>
+          <option value="">Gia</option>
+          <option value="">100</option>
+          <option value="">200</option>
+        </select>
       </div>
     </div>
-      
 
+    <!-- smenu-->
+    <div class="sideNav" id="sideNav">
+      <div class="sideNav__first">
+        <button onclick="close_sideNav()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <ul>
+        <li>
+          <a href=""><i class="fa-solid fa-house"></i>Trang chu</a>
+        </li>
+        <li onclick="open_productSide()" class="sideNav__product">
+          <a href=""><i class="fa-solid fa-seedling"></i>san Pham</a>
+          <button><i class="fa-solid fa-greater-than"></i></button>
+        </li>
+        <li>
+          <a href=""><i class="fa-solid fa-bell"></i>Thong Bao</a>
+        </li>
+        <li>
+          <a href=""><i class="fa-solid fa-address-book"></i>Lien He</a>
+        </li>
+        <li>
+          <a href=""><i class="fa-solid fa-question"></i>Tro Giup</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="sideNav__productSide" class="sideNav__productSide">
+      <div class="productSide__first">
+        <button onclick="close_productSide()"><i style="padding: 0 10px;" class="fa-solid fa-less-than"></i>SanPham</button>
+        <button onclick="close_sideNav(); close_productSide()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <ul>
+        <li><a href="">Tất cả Sản Phẩm</a></li>
+        <li><a href="">GUNDAM</a></li>
+        <li><a href="">Mô Hình Tĩnh</a></li>
+        <li><a href="">Dụng Cụ</a></li>
+        <li><a href="">DRAGON BALL</a></li>
+        <li><a href="">FIGURE</a></li>
+      </ul>
     </div>
   </body>
 </html>
