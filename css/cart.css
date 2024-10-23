@@ -1,0 +1,87 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: var(--primary--color3);
+    font-size: 14px;
+    height:100vh;
+}
+:root{
+    --primary--color2:#E3F1B6;
+    --primary--color3:#FFFFFF;
+    --primary--color4:rgb(250, 173, 31);
+}
+.nav h1{
+    margin: 20px 30px;
+    display: inline-block;
+    position: relative;
+}
+.nav h1::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width:50%;
+    background: var(--primary--color4);
+    left:0px;
+    bottom: 0;
+}
+table{
+    width:80%;
+    margin: 0 auto;
+}
+thead th{
+    font-size: 18px;
+}
+tbody tr td img{
+    width:100px;
+    height:100px;
+}
+tbody tr{
+    text-align: center;
+}
+table th{
+    background-color: aqua;
+    height:46px;
+}
+.number__quantity,.number__total{
+    width:100px;
+}
+.change__quantity{
+    display: flex;
+    margin-left: 20px;
+}
+.change__quantity input{
+    text-align: center;
+}
+.change__quantity button{
+    cursor: pointer;
+}
+.gioHang{
+    text-align: right;
+    width:100%;
+}
+.gioHang a{
+    color: #353432;
+}
+.gioHang a i{
+    padding:20px;
+}
+.agree__order{
+    width: 100%;
+    text-align: right;
+    margin-bottom: 5px;
+}
+.agree__order button{
+    width: 200px;
+    padding:8px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(225, 120, 120);
+}
+.agree__order button:hover,
+.agree__order button:active{
+    background-color: #353432;
+}
